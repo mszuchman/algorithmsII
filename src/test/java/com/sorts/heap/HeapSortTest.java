@@ -5,10 +5,12 @@ import java.util.Arrays;
 import org.junit.Assert;
 import org.junit.Test;
 
+import com.sorts.SortAlgorithm;
+
 public class HeapSortTest {
 	@Test
 	public void testSortedNumbers(){
-		HeapSort<Integer> heapSort = new HeapSort<Integer>();
+		SortAlgorithm<Integer> heapSort = new HeapSort<Integer>();
 		
 		Integer[] numbers  = new Integer[100];
 		for (int i = 0; i < numbers.length; i++) {
@@ -22,7 +24,7 @@ public class HeapSortTest {
 	}
 	@Test
 	public void testWithReverseSortNumbers(){
-		HeapSort<Integer> heapSort = new HeapSort<Integer>();
+		SortAlgorithm<Integer> heapSort = new HeapSort<Integer>();
 		
 		Integer[] numbers  = new Integer[100];
 		for (int i = 0; i < numbers.length; i++) {
@@ -38,7 +40,7 @@ public class HeapSortTest {
 	}
 	@Test
 	public void testWithShuffleNumbers(){
-		HeapSort<Integer> heapSort = new HeapSort<Integer>();
+		SortAlgorithm<Integer> heapSort = new HeapSort<Integer>();
 		heapSort.turnOnDebug(true);
 		Integer[] numbers  = { 2, 3, 1, 4, 5, 0 };
 		Integer[] copy = numbers.clone();
