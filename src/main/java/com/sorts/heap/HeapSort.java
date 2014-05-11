@@ -35,8 +35,8 @@ public class HeapSort<T extends Comparable<T>> extends SortAlgorithm<T> {
 		for (int n = array.length - 1; n >= 0; n--) {
 			swap(array, 0, n);
 			parent = 0;
+			
 			while (true) {
-				++i;
 				leftChild = leftChild(parent);
 				if (leftChild >= n)
 					break;
@@ -65,26 +65,11 @@ public class HeapSort<T extends Comparable<T>> extends SortAlgorithm<T> {
 		draw(array);
 	}
 
-	private static int getParent(int i) {
+	private int getParent(int i) {
 		return (int) Math.floor((i - 1) / 2);
 	}
 
-	private static int leftChild(int i) {
+	private int leftChild(int i) {
 		return (int) i * 2 + 1;
 	}
-
-	static int	i	= 0;
-	/*
-	 * public static void main(String[] args) {
-	 * //{ 2, 3, 1, 4, 5, 0 };
-	 * List<Integer> l = new ArrayList<Integer>();
-	 * for (int i = 0; i < 100; i++) {
-	 * l.add(i);
-	 * }
-	 * Integer[] array = (Integer[]) l.toArray(new Integer[]{});
-	 * draw(array);
-	 * sort(array);
-	 * System.out.println(i + " executions");
-	 * }
-	 */
 }
